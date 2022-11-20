@@ -20,12 +20,10 @@ public class MagnetController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 position = transform.position;
-        float radius = 1.5f * fishController.moveStep;
-        int triggered = Physics.OverlapSphereNonAlloc(position, radius, colliders, layers);
+        int triggered = Physics.OverlapSphereNonAlloc(transform.position, 1.5f * fishController.moveStep, colliders, layers);
         for (int i = 0; i < triggered; ++i)
         {
-            colliders[i].GetComponent<MagnetEffectController>().Initialize(position);
+            colliders[i].GetComponent<MagnetEffectController>().MoveTo(transform);
         }
     }
 }

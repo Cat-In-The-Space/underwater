@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SceneManagerProxyController : MonoBehaviour
+public class MainMenuUIController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,12 +16,14 @@ public class SceneManagerProxyController : MonoBehaviour
     {
         
     }
-    public void GoToScene(string sceneName)
+
+    public void OnButtonPlayClick()
     {
-        ManagerController.GetInstance().sceneManager.GoToScene(sceneName);
+        SceneManager.LoadScene("MainScene");
     }
-    public void Quit()
+
+    public void OnButtonStoreClick()
     {
-        ManagerController.GetInstance().sceneManager.Quit();
+        SceneManager.LoadScene("StoreScene");
     }
 }

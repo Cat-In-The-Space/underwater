@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FishHealthController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class FishHealthController : MonoBehaviour
     public float regenerationTimeElapsed = 0.0f;
     public SkinnedMeshRenderer[] meshes;
     public ProgressBarController healthBar;
+    public float liveTime = 0.0f;
     public bool Damage(int amount)
     {
         if (immunityTimeElapsed > 0.0f)
@@ -25,8 +27,9 @@ public class FishHealthController : MonoBehaviour
         healthBar.SetValue(health, maxHealth);
         if (health <= 0)
         {
-            health = 0;
-            // Die
+            PlayerPrefs.SetFloat("NewLiveTime", liveTime);
+            PlayerPrefs.SetInt("NewBonus", GetComponent<FishBonusController>().bonuses);
+            SceneManager.LoadScene("ResultScene");
         }
         else
         {
@@ -90,5 +93,7 @@ public class FishHealthController : MonoBehaviour
                 regenerationTimeElapsed -= Time.deltaTime;
             }
         }
+
+        liveTime += Time.deltaTime;
     }
 }

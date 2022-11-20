@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7287697975818521549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7287697975818521550}
+  - component: {fileID: 7287697975818521551}
+  - component: {fileID: 7287697975818521548}
+  - component: {fileID: 8406073813457574125}
+  - component: {fileID: 345537773946297289}
+  m_Layer: 0
+  m_Name: Enemy Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7287697975818521550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287697975818521549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7287697975818521551
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287697975818521549}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &7287697975818521548
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287697975818521549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8406073813457574125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287697975818521549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18eb8ddbe6e0d6344965f6db618c6174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelGeneratorController: {fileID: 0}
+  levelSize: {x: 0, y: 0, z: 0}
+  levelDeep: 4
+--- !u!114 &345537773946297289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287697975818521549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4367a2a33ff8548a29314424f36f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableEnemies:
+  - {fileID: 3845087786610302928, guid: 85b5a9bdf67c4284f857e9728fa4c756, type: 3}
+  - {fileID: 193747185452810845, guid: 6913a21a78295de42a891fce7f4724d3, type: 3}
+  - {fileID: 5752758097938048678, guid: 42677c60b5026104da34aef66f062e4d, type: 3}
+  - {fileID: 2950514378938125536, guid: c25565c1f73e37445be0ef40f7a65e08, type: 3}
+  - {fileID: 4984725342799873033, guid: 7ca5352a3ca7a0e47a0f82a717560cb1, type: 3}
+  - {fileID: 7986611700985040104, guid: 74aec315423df2049830d599be52145c, type: 3}
+  - {fileID: 1342413548933734001, guid: 6f463d812895ade489628a3f78c078e2, type: 3}
+  - {fileID: 7104829198278548162, guid: 80de354b1f8b48042b52ceca92e9f6df, type: 3}
+  - {fileID: 6353743915031059305, guid: ee76afb79fe1f17468909519f26f258a, type: 3}
+  - {fileID: 803129808149472866, guid: 44236ccb16338be4d9b4eebc89ca388b, type: 3}
+  - {fileID: 1796314098293085550, guid: f18e6debed43a394a84fc7fce1069205, type: 3}
+  - {fileID: 7841165179668490783, guid: cfec1d2a3c67b68459424b6e92e42b92, type: 3}
+  - {fileID: 202206807600598930, guid: 4faa8583263700b40bc4cbfe18258f48, type: 3}
+  - {fileID: 6413580162542204836, guid: d22a213049da55a4e9bbd2facf2fe705, type: 3}
+  - {fileID: 7502618314664425263, guid: 52663329bbac36e48bbe148175b8a85b, type: 3}
+  - {fileID: 8406376556357342592, guid: 144211713f75628418cec11540c9e4bc, type: 3}
+  - {fileID: 6912596160653432799, guid: 3376d4916cb91cd46a0bf2fb1a58dc51, type: 3}
+  - {fileID: 5048977316288918303, guid: 8039e2fb15743a04686cfb0cbdb73482, type: 3}
+  zOffset: 3

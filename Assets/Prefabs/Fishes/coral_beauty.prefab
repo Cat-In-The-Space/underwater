@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 5752758097938414214}
   - component: {fileID: 5752758097945302372}
   - component: {fileID: 8932579763947943386}
+  - component: {fileID: 6885720477106804330}
   m_Layer: 0
   m_Name: coral_beauty
   m_TagString: Untagged
@@ -233,6 +234,26 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.05}
+--- !u!114 &6885720477106804330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752758097938048678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  maxHealth: 2
+  canHealthRegenerate: 1
+  healthRegenerationTime: 30
+  canSlowMode: 0
+  slowModeRegenerationTime: 0
+  haveMagnet: 0
+  cost: 300
 --- !u!1 &5752758097938048680
 GameObject:
   m_ObjectHideFlags: 0

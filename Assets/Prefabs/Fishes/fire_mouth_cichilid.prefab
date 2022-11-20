@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 4984725342800238633}
   - component: {fileID: 4984725342807144405}
   - component: {fileID: 2558224333129501467}
+  - component: {fileID: 2517660548765212467}
   m_Layer: 0
   m_Name: fire_mouth_cichilid
   m_TagString: Untagged
@@ -195,6 +196,26 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.05}
+--- !u!114 &2517660548765212467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984725342799873033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  maxHealth: 2
+  canHealthRegenerate: 1
+  healthRegenerationTime: 30
+  canSlowMode: 0
+  slowModeRegenerationTime: 0
+  haveMagnet: 0
+  cost: 500
 --- !u!1 &4984725342799873035
 GameObject:
   m_ObjectHideFlags: 0

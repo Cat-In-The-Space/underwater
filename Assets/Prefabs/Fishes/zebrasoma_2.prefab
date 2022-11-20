@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 5048977316288425855}
   - component: {fileID: 5048977316298260661}
   - component: {fileID: 254582430200610696}
+  - component: {fileID: 922198597866273582}
   m_Layer: 0
   m_Name: zebrasoma_2
   m_TagString: Untagged
@@ -364,6 +365,26 @@ CapsuleCollider:
   m_Height: 0.5304823
   m_Direction: 2
   m_Center: {x: 0, y: 0.02, z: 0.04805231}
+--- !u!114 &922198597866273582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048977316288918303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  maxHealth: 3
+  canHealthRegenerate: 1
+  healthRegenerationTime: 30
+  canSlowMode: 1
+  slowModeRegenerationTime: 40
+  haveMagnet: 0
+  cost: 800
 --- !u!1 &5048977316288918369
 GameObject:
   m_ObjectHideFlags: 0

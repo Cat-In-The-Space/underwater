@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 202206807600698354}
   - component: {fileID: 202206807607901232}
   - component: {fileID: 3513197466923345288}
+  - component: {fileID: 5004206657429367593}
   m_Layer: 0
   m_Name: plectorhinchus
   m_TagString: Untagged
@@ -105,6 +106,26 @@ CapsuleCollider:
   m_Height: 0.62567234
   m_Direction: 2
   m_Center: {x: 0, y: 0.010000005, z: -0.012333393}
+--- !u!114 &5004206657429367593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202206807600598930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  maxHealth: 2
+  canHealthRegenerate: 1
+  healthRegenerationTime: 30
+  canSlowMode: 0
+  slowModeRegenerationTime: 0
+  haveMagnet: 0
+  cost: 1250
 --- !u!1 &202206807600598932
 GameObject:
   m_ObjectHideFlags: 0

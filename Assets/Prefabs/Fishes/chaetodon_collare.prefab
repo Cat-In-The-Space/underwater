@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 3845087786610590704}
   - component: {fileID: 3845087786617596946}
   - component: {fileID: 1714641213326767237}
+  - component: {fileID: 2208486520131429073}
   m_Layer: 0
   m_Name: chaetodon_collare
   m_TagString: Untagged
@@ -581,6 +582,26 @@ CapsuleCollider:
   m_Height: 0.4422245
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.05}
+--- !u!114 &2208486520131429073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3845087786610302928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  maxHealth: 3
+  canHealthRegenerate: 1
+  healthRegenerationTime: 20
+  canSlowMode: 1
+  slowModeRegenerationTime: 30
+  haveMagnet: 1
+  cost: 1000
 --- !u!1 &3845087786610302930
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,10 @@ public class FishController : MonoBehaviour
 {
     public string joystickName = "Fish";
     public bool canMove = true;
+    public Vector3 initialPosition;
     public Vector3 targetPosition;
     public float moveStep = 1.0f;
+    public float elapsed = 0.0f;
 
     public float minX = -1.0f;
     public float maxX = 1.0f;
@@ -15,20 +17,19 @@ public class FishController : MonoBehaviour
     public float maxY = 1.0f;
 
     public float moveSpeed = 1.0f;
-    public Quaternion initialRotation;
     public float rotationSpeed = 1.0f;
     public float rotationFactor = 0.5f; // Greatest - more sides
 
     // Start is called before the first frame update
     void Start()
     {
+        initialPosition = transform.localPosition;
         targetPosition = transform.localPosition;
-        initialRotation = transform.localRotation;
     }
 
     bool onPlace()
     {
-        return Vector3.Distance(transform.localPosition, targetPosition) < 0.1f;
+        return Vector3.Distance(transform.localPosition, targetPosition) < 0.01f;
     }
     // Update is called once per frame
     void Update()
@@ -39,6 +40,8 @@ public class FishController : MonoBehaviour
         }
         if (canMove)
         {
+            elapsed = 0.0f;
+            initialPosition = targetPosition;
             float h = UltimateJoystick.GetHorizontalAxis(joystickName);
 
             if (h > 0.5f)
@@ -67,11 +70,11 @@ public class FishController : MonoBehaviour
             {
                 canMove = false;
             }
-        } 
+        }
 
-        transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
+        transform.localPosition = Vector3.Lerp(initialPosition, targetPosition, moveSpeed * elapsed);
+        elapsed += Time.deltaTime;
 
-        // Warn! LookRotation make rotation in global coordinates (from point (0,0,0) to (globalX, globalY, globalZ))
         Vector3 look = targetPosition - transform.localPosition;
         look.z = moveSpeed * rotationFactor;
         transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.LookRotation(look), rotationSpeed * Time.deltaTime);

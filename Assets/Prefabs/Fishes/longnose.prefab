@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 803129808149117442}
   - component: {fileID: 803129808158954946}
   - component: {fileID: 1472879177357190738}
+  - component: {fileID: 6309907285276884059}
   m_Layer: 0
   m_Name: longnose
   m_TagString: Untagged
@@ -675,6 +676,26 @@ CapsuleCollider:
   m_Height: 0.43392697
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.06696348}
+--- !u!114 &6309907285276884059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803129808149472866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  maxHealth: 1
+  canHealthRegenerate: 0
+  healthRegenerationTime: 0
+  canSlowMode: 0
+  slowModeRegenerationTime: 0
+  haveMagnet: 0
+  cost: 400
 --- !u!1 &803129808149472868
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MagnetEffectController : MonoBehaviour
 {
-    Vector3 initialPosition;
-    Vector3 targetPosition;
-    float magnetSpeed = 1.0f;
-    float takeTime = 0.0f;
-    public void Initialize(Vector3 newTargetPosition)
+    public float magnetSpeed = 1.0f;
+    Transform targetTransform;
+    public void MoveTo(Transform newTargetTransform)
     {
         transform.parent = null;
-        initialPosition = transform.position;
-        targetPosition = newTargetPosition;
+        targetTransform = newTargetTransform;
         enabled = true;
     }
     // Start is called before the first frame update
@@ -24,7 +21,6 @@ public class MagnetEffectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(initialPosition, targetPosition, takeTime);
-        takeTime += magnetSpeed * Time.deltaTime;
+        transform.position += (targetTransform.position - transform.position).normalized * magnetSpeed * Time.deltaTime;
     }
 }

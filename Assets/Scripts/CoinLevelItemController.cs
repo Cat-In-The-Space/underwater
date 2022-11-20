@@ -20,10 +20,19 @@ public class CoinLevelItemController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") || (other.transform.parent != null && other.transform.parent.CompareTag("Player")))
+        FishBonusController fishBonusController = null;
+        if (other.gameObject.CompareTag("Player"))
         {
+            fishBonusController = other.GetComponent<FishBonusController>();
+        }
+        else if (other.transform.parent != null && other.transform.parent.CompareTag("Player"))
+        {
+            fishBonusController = other.transform.parent.GetComponent<FishBonusController>();
+        }
+        if (fishBonusController)
+        {
+            fishBonusController.bonuses += amount;
             Destroy(gameObject);
-            ManagerController.GetInstance().bonusManager.AddBonus(amount);
         }
     }
 }

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7998082183225767529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7998082183225767527}
+  - component: {fileID: 7998082183225767528}
+  m_Layer: 0
+  m_Name: FishSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7998082183225767527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998082183225767529}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4, y: 1, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &7998082183225767528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998082183225767529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ad53485e9df75438b24cd772a36e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishes:
+  - {fileID: 3845087786610302928, guid: 9f94142fa96b4084dacb6a64fd825f0d, type: 3}
+  - {fileID: 193747185452810845, guid: bb38b89df1bae004894f8696c9354dc6, type: 3}
+  - {fileID: 5752758097938048678, guid: 5814d6c4016d91043bf4214323cc515d, type: 3}
+  - {fileID: 2950514378938125536, guid: 8aa0eb2f54e1caf4eb82c636a4528c5e, type: 3}
+  - {fileID: 4984725342799873033, guid: e8b4a0718e6223f40b8d335a8ca054ad, type: 3}
+  - {fileID: 7986611700985040104, guid: 562788a03f1514c4fb5771ebfccbdd09, type: 3}
+  - {fileID: 1342413548933734001, guid: 7ed8d6f99bed7f74ab2f93e78e32f385, type: 3}
+  - {fileID: 7104829198278548162, guid: 6e87a4eae4877e94283d0f46c1345287, type: 3}
+  - {fileID: 6353743915031059305, guid: e111e991ea73a784f90fbca199635228, type: 3}
+  - {fileID: 803129808149472866, guid: bbc882304f85fb6418768b8e08fcd1da, type: 3}
+  - {fileID: 1796314098293085550, guid: 2120dd89c570d06439ad4b391adcb5eb, type: 3}
+  - {fileID: 7841165179668490783, guid: 66bc053b5dfb0f949b6b435e4543361f, type: 3}
+  - {fileID: 202206807600598930, guid: 7c1a3f7e69bb0674e8abe0fd9ea50bc5, type: 3}
+  - {fileID: 6413580162542204836, guid: 98dede7165ad60243b7c8bb49f434781, type: 3}
+  - {fileID: 7502618314664425263, guid: 204e777c1e754bd4192f34ea7d79df91, type: 3}
+  - {fileID: 8406376556357342592, guid: f8a41f3001c0a6942ac9981f662f445e, type: 3}
+  - {fileID: 6912596160653432799, guid: d23ad89e777a29f45b469a79fcb2d474, type: 3}
+  - {fileID: 5048977316288918303, guid: 7e67e6054ed65514e9374236b5d1652f, type: 3}
+  minSpawnAngle: -30
+  maxSpawnAngle: 30
+  minSpawnTime: 2
+  maxSpawnTime: 5
+  timeToSpawn: 0
+  minSwimSpeed: 1
+  maxSwimSpeed: 2
+  swimDistance: 10

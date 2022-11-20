@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class FishStatisticController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float moveSpeed;
+    public int maxHealth;
+    public bool canHealthRegenerate;
+    public float healthRegenerationTime;
+    public bool canSlowMode;
+    public float slowModeRegenerationTime;
+    public bool haveMagnet;
+    public int cost;
 }

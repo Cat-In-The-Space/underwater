@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 7104829198278117090}
   - component: {fileID: 7104829198285809920}
   - component: {fileID: 7104829198278548160}
+  - component: {fileID: 1460393992517702954}
   m_Layer: 0
   m_Name: golden_fish
   m_TagString: Untagged
@@ -424,6 +425,26 @@ CapsuleCollider:
   m_Height: 0.37015247
   m_Direction: 2
   m_Center: {x: 0, y: -0.0059651732, z: 0.02328825}
+--- !u!114 &1460393992517702954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7104829198278548162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  maxHealth: 0
+  canHealthRegenerate: 0
+  healthRegenerationTime: 0
+  canSlowMode: 0
+  slowModeRegenerationTime: 0
+  haveMagnet: 0
+  cost: 0
 --- !u!1 &7104829198278548164
 GameObject:
   m_ObjectHideFlags: 0

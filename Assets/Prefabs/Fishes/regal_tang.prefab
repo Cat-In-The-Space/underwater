@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 7502618314664717135}
   - component: {fileID: 7502618314657023117}
   - component: {fileID: 3763574144709300492}
+  - component: {fileID: 1050068377558848972}
   m_Layer: 0
   m_Name: regal_tang
   m_TagString: Untagged
@@ -364,6 +365,26 @@ CapsuleCollider:
   m_Height: 0.5833807
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.0053772926}
+--- !u!114 &1050068377558848972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502618314664425263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  maxHealth: 3
+  canHealthRegenerate: 1
+  healthRegenerationTime: 30
+  canSlowMode: 1
+  slowModeRegenerationTime: 30
+  haveMagnet: 1
+  cost: 900
 --- !u!1 &7502618314664425281
 GameObject:
   m_ObjectHideFlags: 0

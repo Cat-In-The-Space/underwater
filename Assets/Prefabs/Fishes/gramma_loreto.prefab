@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 6353743915031349065}
   - component: {fileID: 6353743915038320821}
   - component: {fileID: 4944261671892819689}
+  - component: {fileID: 6614753592523960274}
   m_Layer: 0
   m_Name: gramma_loreto
   m_TagString: Untagged
@@ -454,6 +455,26 @@ CapsuleCollider:
   m_Height: 0.5506649
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.028799057}
+--- !u!114 &6614753592523960274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353743915031059305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  maxHealth: 2
+  canHealthRegenerate: 1
+  healthRegenerationTime: 50
+  canSlowMode: 0
+  slowModeRegenerationTime: 0
+  haveMagnet: 0
+  cost: 600
 --- !u!1 &6353743915031059307
 GameObject:
   m_ObjectHideFlags: 0

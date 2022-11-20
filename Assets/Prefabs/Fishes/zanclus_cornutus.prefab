@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8406376556357634528}
   - component: {fileID: 8406376556347827754}
   - component: {fileID: 7248383392215102072}
+  - component: {fileID: -6443382461837916985}
   m_Layer: 0
   m_Name: zanclus_cornutus
   m_TagString: Untagged
@@ -69,6 +70,26 @@ CapsuleCollider:
   m_Height: 0.396842
   m_Direction: 2
   m_Center: {x: 0, y: 0.049999997, z: 0.047528744}
+--- !u!114 &-6443382461837916985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406376556357342592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  maxHealth: 3
+  canHealthRegenerate: 1
+  healthRegenerationTime: 30
+  canSlowMode: 1
+  slowModeRegenerationTime: 30
+  haveMagnet: 1
+  cost: 700
 --- !u!1 &8406376556357342594
 GameObject:
   m_ObjectHideFlags: 0

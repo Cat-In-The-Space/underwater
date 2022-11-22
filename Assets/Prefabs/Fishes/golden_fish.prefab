@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  maxHealth: 0
+  maxHealth: 1
   canHealthRegenerate: 0
   healthRegenerationTime: 0
   canSlowMode: 0

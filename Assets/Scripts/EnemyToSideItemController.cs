@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyToSideItemController : EnemyItemController
 {
     public LevelGeneratorController levelGeneratorController;
-    public bool isInstantiated = false;
     public float maximalDistanceToPlayer;
     public Vector3 sourcePosition;
     public Vector3 targetPosition;
@@ -31,7 +30,6 @@ public class EnemyToSideItemController : EnemyItemController
 
         controlRotation = newControlRotation;
         continueMove = newContinueMove;
-        isInstantiated = true;
     }
 
     // Start is called before the first frame update
@@ -43,36 +41,33 @@ public class EnemyToSideItemController : EnemyItemController
     // Update is called once per frame
     void Update()
     {
-        if (isInstantiated)
+        sourcePosition.z = transform.position.z;
+        targetPosition.z = transform.position.z;
+
+        float factor = Mathf.InverseLerp(maximalDistanceToPlayer, 0.0f, GetDistanceToPlayer());
+
+        if (factor < 1.0f)
         {
-            sourcePosition.z = transform.position.z;
-            targetPosition.z = transform.position.z;
+            Vector3 position = Vector3.Lerp(sourcePosition, targetPosition, factor);
 
-            float factor = Mathf.InverseLerp(maximalDistanceToPlayer, 0.0f, GetDistanceToPlayer());
+            moveVector = position - transform.position;
+            Vector3 lookVector = new Vector3(moveVector.x, moveVector.y, -1.0f * showSideFactor * levelGeneratorController.speed);
 
-            if (factor < 1.0f)
+            transform.position = position;
+            if (controlRotation)
             {
-                Vector3 position = Vector3.Lerp(sourcePosition, targetPosition, factor);
-
-                moveVector = position - transform.position;
-                Vector3 lookVector = new Vector3(moveVector.x, moveVector.y, -1.0f * showSideFactor * levelGeneratorController.speed);
-
-                transform.position = position;
-                if (controlRotation)
-                {
-                    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookVector), Time.deltaTime);
-                }
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookVector), Time.deltaTime);
             }
-            else
+        }
+        else
+        {
+            if (controlRotation)
             {
-                if (controlRotation)
-                {
-                    transform.rotation = Quaternion.Lerp(transform.rotation, initialRotation, Time.deltaTime);
-                }
-                if (continueMove)
-                {
-                    transform.position += moveVector;
-                }
+                transform.rotation = Quaternion.Lerp(transform.rotation, initialRotation, Time.deltaTime);
+            }
+            if (continueMove)
+            {
+                transform.position += moveVector;
             }
         }
     }

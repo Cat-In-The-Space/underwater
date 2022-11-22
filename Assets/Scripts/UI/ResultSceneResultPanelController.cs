@@ -20,32 +20,17 @@ public class ResultSceneResultPanelController : MonoBehaviour
     public float totalCoinsSpeed = 0.5f;
     public float elapsed = 0.0f;
     // Start is called before the first frame update
-    string TimeToText(float t)
-    {
-        return Mathf.FloorToInt(t / 60.0f) + ":" + Mathf.FloorToInt(t % 60.0f);
-    }
-    string BonusToText(int bonus)
-    {
-        if (bonus >= 1000)
-        {
-            return (bonus / 1000.0f).ToString("F2") + "k";
-        }
-        else
-        {
-            return bonus.ToString();
-        }
-    }
     void Start()
     {
-        liveTime = PlayerPrefs.GetFloat("LiveTime", 0.0f);
-        newLiveTime = PlayerPrefs.GetFloat("NewLiveTime", 0.0f);
-        bonus = PlayerPrefs.GetInt("Bonus", 0);
-        newBonus = PlayerPrefs.GetInt("NewBonus", 0);
+        liveTime = Utils.GetMaxLiveTime();
+        newLiveTime = Utils.GetLevelLiveTime();
+        bonus = Utils.GetBonus();
+        newBonus = Utils.GetLevelBonus();
 
-        recordTimeText.text = TimeToText(liveTime);
-        yourTimeText.text = TimeToText(newLiveTime);
-        yourCoinsText.text = BonusToText(newBonus);
-        totalCoinsText.text = BonusToText(0);
+        recordTimeText.text = Utils.TimeToText(liveTime);
+        yourTimeText.text = Utils.TimeToText(newLiveTime);
+        yourCoinsText.text = Utils.PriceToText(newBonus);
+        totalCoinsText.text = Utils.PriceToText(0);
 
         totalCoins = bonus + newBonus;
     }
@@ -53,7 +38,7 @@ public class ResultSceneResultPanelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        totalCoinsText.text = BonusToText(Mathf.FloorToInt(Mathf.Lerp(0.0f, totalCoins, elapsed * totalCoinsSpeed)));
+        totalCoinsText.text = Utils.PriceToText(Mathf.FloorToInt(Mathf.Lerp(0.0f, totalCoins, elapsed * totalCoinsSpeed)));
         elapsed += Time.deltaTime;
     }
 
@@ -61,9 +46,9 @@ public class ResultSceneResultPanelController : MonoBehaviour
     {
         if (newLiveTime > liveTime)
         {
-            PlayerPrefs.SetFloat("LiveTime", newLiveTime);
+            Utils.SetMaxLiveTime(newLiveTime);
         }
-        PlayerPrefs.SetInt("Bonus", bonus + newBonus);
+        Utils.SetBonus(bonus + newBonus);
         SceneManager.LoadScene("MainMenuScene");
     }
 }

@@ -27,8 +27,8 @@ public class FishHealthController : MonoBehaviour
         healthBar.SetValue(health, maxHealth);
         if (health <= 0)
         {
-            PlayerPrefs.SetFloat("NewLiveTime", liveTime);
-            PlayerPrefs.SetInt("NewBonus", GetComponent<FishBonusController>().bonuses);
+            Utils.SetLevelLiveTime(liveTime);
+            Utils.SetLevelBonus(GetComponent<FishBonusController>().bonuses);
             SceneManager.LoadScene("ResultScene");
         }
         else

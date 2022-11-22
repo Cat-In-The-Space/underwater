@@ -16,13 +16,6 @@ public class MainSceneCoinTextController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fishBonusController.bonuses >= 1000)
-        {
-            text.text = (fishBonusController.bonuses / 1000.0f).ToString("F2") + "k";
-        }
-        else
-        {
-            text.text = fishBonusController.bonuses.ToString();
-        }
+        text.text = Utils.PriceToText(fishBonusController.bonuses);
     }
 }

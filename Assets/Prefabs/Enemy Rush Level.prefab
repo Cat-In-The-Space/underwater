@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelGeneratorController: {fileID: 0}
   levelSize: {x: 0, y: 0, z: 0}
-  levelDeep: 4
+  levelDeep: 5
 --- !u!114 &5682266007207440293
 MonoBehaviour:
   m_ObjectHideFlags: 0

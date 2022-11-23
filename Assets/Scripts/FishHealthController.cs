@@ -45,12 +45,16 @@ public class FishHealthController : MonoBehaviour
         }
         return true;
     }
+    public void Initialize(int newMaxHealth)
+    {
+        meshes = GetComponentsInChildren<SkinnedMeshRenderer>();
+        health = maxHealth = newMaxHealth;
+        healthBar.SetValue(health, maxHealth);
+    }
     // Start is called before the first frame update
     void Start()
     {
-        meshes = GetComponentsInChildren<SkinnedMeshRenderer>();
-        health = maxHealth;
-        healthBar.SetValue(health, maxHealth);
+
     }
 
     // Update is called once per frame

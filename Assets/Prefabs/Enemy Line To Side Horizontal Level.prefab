@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7287697975818521551}
   - component: {fileID: 7287697975818521548}
   - component: {fileID: 8406073813457574125}
-  - component: {fileID: 4145562107203501460}
+  - component: {fileID: 2256534628984856184}
   m_Layer: 0
-  m_Name: Enemy To Side Vertical Level 1
+  m_Name: Enemy Line To Side Horizontal Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   levelGeneratorController: {fileID: 0}
   levelSize: {x: 0, y: 0, z: 0}
   levelDeep: 5
---- !u!114 &4145562107203501460
+--- !u!114 &2256534628984856184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,10 +80,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7287697975818521549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf69ad241dc9c1347b3c5b2ac8749dc7, type: 3}
+  m_Script: {fileID: 11500000, guid: c1747d45aec8550498926a8300c43440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  side: 1
+  levelGeneratorController: {fileID: 0}
+  side: 0
   availableEnemies:
   - {fileID: 3845087786610302928, guid: 673d3e545577b8c4d89867a31a659482, type: 3}
   - {fileID: 193747185452810845, guid: 999ce3f9dca7b87418d2b95b8b10fea0, type: 3}

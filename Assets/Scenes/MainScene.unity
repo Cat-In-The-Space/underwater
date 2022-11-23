@@ -15241,7 +15241,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishController: {fileID: 1883820488}
   availableLevels:
+  - {fileID: 7287697975818521549, guid: fa4535a4d644f46408ce63b84ac0d0dd, type: 3}
+  - {fileID: 7287697975818521549, guid: 49aa8b44395f78e4bae3937b853ad520, type: 3}
+  - {fileID: 7287697975818521549, guid: a44af72d4b48f5344b8f989895143547, type: 3}
+  - {fileID: 7287697975818521549, guid: 933e246dedc2d3548b778e26dd24e47b, type: 3}
+  - {fileID: 7287697975818521549, guid: f8452d83e03e4484fb2bd924527dc621, type: 3}
+  - {fileID: 7287697975818521549, guid: ddc6967f82b2b7d4185de966cf7048e1, type: 3}
+  - {fileID: 7287697975818521549, guid: 03b0c7853acc8fb4aa16293379aac596, type: 3}
+  - {fileID: 7287697975818521549, guid: de0d7109200ce6d4385c8ab2f1b8a58b, type: 3}
   - {fileID: 7287697975818521549, guid: 1e7b0e00fd28fd14f91cb3d116b4f3d7, type: 3}
+  - {fileID: 7287697975818521549, guid: 209a24b1aa8a8854b893836bffe9eaee, type: 3}
+  - {fileID: 7287697975818521549, guid: b6f5df0ba44800a4dbd0ba9c7ce3209f, type: 3}
+  - {fileID: 7287697975818521549, guid: 36f1184b7c7985d419ce9bf5ab1a26ca, type: 3}
+  - {fileID: 7287697975818521549, guid: 9a65cea2f03c684448b71e235bf787af, type: 3}
   activeLevelsCount: 5
   levelSize: {x: 0, y: 0, z: 0}
   speed: 1

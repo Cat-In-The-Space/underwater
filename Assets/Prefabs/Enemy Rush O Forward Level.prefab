@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7287697975818521551}
   - component: {fileID: 7287697975818521548}
   - component: {fileID: 8406073813457574125}
-  - component: {fileID: 4145562107203501460}
+  - component: {fileID: 751867136823487803}
   m_Layer: 0
-  m_Name: Enemy To Side Vertical Level 1
+  m_Name: Enemy Rush O Forward Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   levelGeneratorController: {fileID: 0}
   levelSize: {x: 0, y: 0, z: 0}
   levelDeep: 5
---- !u!114 &4145562107203501460
+--- !u!114 &751867136823487803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,27 +80,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 7287697975818521549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf69ad241dc9c1347b3c5b2ac8749dc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c3e67b688a407043946e4cce7906924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  side: 1
   availableEnemies:
-  - {fileID: 3845087786610302928, guid: 673d3e545577b8c4d89867a31a659482, type: 3}
-  - {fileID: 193747185452810845, guid: 999ce3f9dca7b87418d2b95b8b10fea0, type: 3}
-  - {fileID: 5752758097938048678, guid: c77cd06f3e9b19840aec34db62c7503a, type: 3}
-  - {fileID: 2950514378938125536, guid: c7e420d0dc724784ca3a79095ae4c535, type: 3}
-  - {fileID: 4984725342799873033, guid: 6bf8c9f84e8bb894c8c8307d8e7cb40b, type: 3}
-  - {fileID: 7986611700985040104, guid: 3bd79b1a792690c4989228b7dd18b4d3, type: 3}
-  - {fileID: 1342413548933734001, guid: 34d504f7dd627b840a1bde9b58f23ab6, type: 3}
-  - {fileID: 7104829198278548162, guid: 2072a0a0f5083544a92cb915897a66db, type: 3}
-  - {fileID: 6353743915031059305, guid: c1f90db36ea460242bc26cf1281cc559, type: 3}
-  - {fileID: 803129808149472866, guid: e6176503c48675b4aa3745290eddd1e6, type: 3}
-  - {fileID: 1796314098293085550, guid: 16ce883b2cecb6948bde1fc4b7a5b574, type: 3}
-  - {fileID: 7841165179668490783, guid: df832e87247326849b56879736d2f049, type: 3}
-  - {fileID: 202206807600598930, guid: 0af2ce2ce9e828e48b4eeb852ca1e8bb, type: 3}
-  - {fileID: 6413580162542204836, guid: 55b94dcde03f2164db9b0c001aeb9bd7, type: 3}
-  - {fileID: 7502618314664425263, guid: f50329c370a68824ca53ea8c5929df20, type: 3}
-  - {fileID: 8406376556357342592, guid: f872242df314b584f96e9c4a8abee925, type: 3}
-  - {fileID: 6912596160653432799, guid: 862335458cc741a4ea51e4f544844988, type: 3}
-  - {fileID: 5048977316288918303, guid: 8a4ff8e4fcd28724691230906d1df912, type: 3}
+  - {fileID: 3845087786610302928, guid: 85b5a9bdf67c4284f857e9728fa4c756, type: 3}
+  - {fileID: 193747185452810845, guid: 6913a21a78295de42a891fce7f4724d3, type: 3}
+  - {fileID: 5752758097938048678, guid: 42677c60b5026104da34aef66f062e4d, type: 3}
+  - {fileID: 2950514378938125536, guid: c25565c1f73e37445be0ef40f7a65e08, type: 3}
+  - {fileID: 4984725342799873033, guid: 7ca5352a3ca7a0e47a0f82a717560cb1, type: 3}
+  - {fileID: 7986611700985040104, guid: 74aec315423df2049830d599be52145c, type: 3}
+  - {fileID: 1342413548933734001, guid: 6f463d812895ade489628a3f78c078e2, type: 3}
+  - {fileID: 7104829198278548162, guid: 80de354b1f8b48042b52ceca92e9f6df, type: 3}
+  - {fileID: 6353743915031059305, guid: ee76afb79fe1f17468909519f26f258a, type: 3}
+  - {fileID: 803129808149472866, guid: 44236ccb16338be4d9b4eebc89ca388b, type: 3}
+  - {fileID: 1796314098293085550, guid: f18e6debed43a394a84fc7fce1069205, type: 3}
+  - {fileID: 7841165179668490783, guid: cfec1d2a3c67b68459424b6e92e42b92, type: 3}
+  - {fileID: 202206807600598930, guid: 4faa8583263700b40bc4cbfe18258f48, type: 3}
+  - {fileID: 6413580162542204836, guid: d22a213049da55a4e9bbd2facf2fe705, type: 3}
+  - {fileID: 7502618314664425263, guid: 52663329bbac36e48bbe148175b8a85b, type: 3}
+  - {fileID: 8406376556357342592, guid: 144211713f75628418cec11540c9e4bc, type: 3}
+  - {fileID: 6912596160653432799, guid: 3376d4916cb91cd46a0bf2fb1a58dc51, type: 3}
+  - {fileID: 5048977316288918303, guid: 8039e2fb15743a04686cfb0cbdb73482, type: 3}
   zOffset: 3

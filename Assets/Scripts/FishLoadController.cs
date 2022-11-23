@@ -7,14 +7,14 @@ public class FishLoadController : MonoBehaviour
     public GameObject[] fishes; // WARNING! Same order like in shop
     void Start()
     {
-        GameObject fish = Instantiate(fishes[Utils.GetActiveFishIndex()], transform);
+        GameObject fish = Instantiate(fishes[Utils.GetActiveFishIndex()], transform.position, transform.rotation, transform);
         FishStatisticController fishStatistic = fish.GetComponent<FishStatisticController>();
 
         FishController fishController = GetComponent<FishController>();
         fishController.moveSpeed = fishStatistic.moveSpeed;
 
         FishHealthController fishHealthController = GetComponent<FishHealthController>();
-        fishHealthController.health = fishHealthController.maxHealth = fishStatistic.maxHealth;
+        fishHealthController.Initialize(fishStatistic.maxHealth);
         if (fishStatistic.canHealthRegenerate)
         {
             fishHealthController.canRegenerate = true;

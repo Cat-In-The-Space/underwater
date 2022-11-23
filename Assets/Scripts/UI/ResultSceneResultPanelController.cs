@@ -17,7 +17,7 @@ public class ResultSceneResultPanelController : MonoBehaviour
     public Text yourCoinsText;
 
     public int totalCoins;
-    public float totalCoinsSpeed = 0.5f;
+    public float totalCoinsSpeed = 0.7f;
     public float elapsed = 0.0f;
     // Start is called before the first frame update
     void Start()

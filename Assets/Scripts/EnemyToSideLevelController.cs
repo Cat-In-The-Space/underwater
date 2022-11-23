@@ -36,7 +36,7 @@ public class EnemyToSideLevelController : MonoBehaviour, ILevelControllable
                 sourcePosition.x = (sizeXinStep / 2.0f) * newFishMoveStep;
                 targetPosition.x = (-sizeXinStep / 2.0f) * newFishMoveStep;
             }
-            sourcePosition.y = targetPosition.y = Random.Range(0, sizeYinStep + 1) - newLevelSize.y / 2.0f;
+            sourcePosition.y = targetPosition.y = (Random.Range(0, sizeYinStep + 1) * newFishMoveStep) - newLevelSize.y / 2.0f;
         }
         else if (side == Side.VERTICAL)
         {
@@ -50,7 +50,7 @@ public class EnemyToSideLevelController : MonoBehaviour, ILevelControllable
                 sourcePosition.y = (-sizeYinStep / 2.0f) * newFishMoveStep;
                 targetPosition.y = (sizeYinStep / 2.0f) * newFishMoveStep;
             }
-            sourcePosition.x = targetPosition.x = Random.Range(0, sizeXinStep + 1) - newLevelSize.x / 2.0f;
+            sourcePosition.x = targetPosition.x = (Random.Range(0, sizeXinStep + 1) * newFishMoveStep) - newLevelSize.x / 2.0f;
         }
 
         Vector3 spawnPosition = new Vector3(sourcePosition.x, sourcePosition.y, transform.position.z - zOffset);
@@ -61,12 +61,12 @@ public class EnemyToSideLevelController : MonoBehaviour, ILevelControllable
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

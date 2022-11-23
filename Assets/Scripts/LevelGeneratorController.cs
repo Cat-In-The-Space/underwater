@@ -10,6 +10,8 @@ public class LevelGeneratorController : MonoBehaviour
     public int activeLevelsCount = 3;
     public Vector3 levelSize;
     public float speed = 1.0f;
+    public float speedIncreaseFactor = 1.01f;
+    public float maxSpeed = 10.0f;
 
     public ParallaxItemController[] parallaxes;
     public int currentParallax = 0;
@@ -85,5 +87,6 @@ public class LevelGeneratorController : MonoBehaviour
     {
         activeLevels.RemoveFirst();
         activeLevels.AddLast(InstantiateNewLevel(activeLevels.Last.Value.transform.localPosition.z));
+        speed = Mathf.Min(speed * speedIncreaseFactor, maxSpeed);
     }
 }

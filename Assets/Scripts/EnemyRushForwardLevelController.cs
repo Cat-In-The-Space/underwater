@@ -5,10 +5,24 @@ using UnityEngine;
 public class EnemyRushForwardLevelController : MonoBehaviour, ILevelControllable
 {
     public GameObject[] availableEnemies;
+    public GameObject[] availableBonuses;
     public float zOffset;
+    public float zBonusOffset;
     GameObject GetRandomEnemy()
     {
         return availableEnemies[Random.Range(0, availableEnemies.Length)];
+    }
+    GameObject GetRandomBonus()
+    {
+        return availableBonuses[Random.Range(0, availableBonuses.Length)];
+    }
+    void SpawnEnemy(float x, float y)
+    {
+        GameObject enemy = Instantiate(GetRandomEnemy(), new Vector3(x, y, transform.position.z - zOffset), Quaternion.LookRotation(-Vector3.forward), transform);
+        if (Random.Range(0, 2) == 1)
+        {
+            Instantiate(GetRandomBonus(), new Vector3(x, y, transform.position.z - zOffset - zBonusOffset), Quaternion.identity, enemy.transform);
+        }
     }
     public void LevelInstantiated(LevelGeneratorController newLevelGeneratorController, Vector3 newLevelSize, float newFishMoveStep)
     {
@@ -23,7 +37,7 @@ public class EnemyRushForwardLevelController : MonoBehaviour, ILevelControllable
         for (int i = 0; i <= sizeYinStep; ++i)
         {
             float yi = (i * newFishMoveStep) - newLevelSize.y / 2.0f;
-            Instantiate(GetRandomEnemy(), new Vector3(x, yi, transform.position.z - zOffset), Quaternion.LookRotation(-Vector3.forward), transform);
+            SpawnEnemy(x, yi);
         }
 
         float y = (yInStep * newFishMoveStep) - (newLevelSize.y / 2.0f);
@@ -35,7 +49,7 @@ public class EnemyRushForwardLevelController : MonoBehaviour, ILevelControllable
                 continue;
             }
             float xi = (i * newFishMoveStep) - newLevelSize.x / 2.0f;
-            Instantiate(GetRandomEnemy(), new Vector3(xi, y, transform.position.z - zOffset), Quaternion.LookRotation(-Vector3.forward), transform);
+            SpawnEnemy(xi, y);
         }
     }
     // Start is called before the first frame update

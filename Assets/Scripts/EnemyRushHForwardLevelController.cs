@@ -11,14 +11,24 @@ public class EnemyRushHForwardLevelController : MonoBehaviour, ILevelControllabl
     }
     public Side side;
     public GameObject[] availableEnemies;
+    public GameObject[] availableBonuses;
     public float zOffset;
+    public float zBonusOffset;
     GameObject GetRandomEnemy()
     {
         return availableEnemies[Random.Range(0, availableEnemies.Length)];
     }
+    GameObject GetRandomBonus()
+    {
+        return availableBonuses[Random.Range(0, availableBonuses.Length)];
+    }
     void SpawnEnemy(float x, float y)
     {
-        Instantiate(GetRandomEnemy(), new Vector3(x, y, transform.position.z - zOffset), Quaternion.LookRotation(-Vector3.forward), transform);
+        GameObject enemy = Instantiate(GetRandomEnemy(), new Vector3(x, y, transform.position.z - zOffset), Quaternion.LookRotation(-Vector3.forward), transform);
+        if (Random.Range(0, 2) == 1)
+        {
+            Instantiate(GetRandomBonus(), new Vector3(x, y, transform.position.z - zOffset - zBonusOffset), Quaternion.identity, enemy.transform);
+        }
     }
     public void LevelInstantiated(LevelGeneratorController newLevelGeneratorController, Vector3 newLevelSize, float newFishMoveStep)
     {

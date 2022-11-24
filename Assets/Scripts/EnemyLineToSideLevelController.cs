@@ -13,10 +13,16 @@ public class EnemyLineToSideLevelController : MonoBehaviour, ILevelControllable
     public LevelGeneratorController levelGeneratorController;
     public Side side;
     public GameObject[] availableEnemies;
+    public GameObject[] availableBonuses;
+    public float zBonusOffset;
     public float zOffset;
     GameObject GetRandomEnemy()
     {
         return availableEnemies[Random.Range(0, availableEnemies.Length)];
+    }
+    GameObject GetRandomBonus()
+    {
+        return availableBonuses[Random.Range(0, availableBonuses.Length)];
     }
     void SpawnEnemy(Vector3 sourcePosition, Vector3 targetPosition)
     {
@@ -24,6 +30,10 @@ public class EnemyLineToSideLevelController : MonoBehaviour, ILevelControllable
 
         GameObject enemy = Instantiate(GetRandomEnemy(), spawnPosition, Quaternion.LookRotation(-Vector3.forward), transform);
         enemy.GetComponent<EnemyToSideItemController>().EnemyInstantiated(levelGeneratorController, sourcePosition, targetPosition, true, false);
+        if (Random.Range(0, 2) == 1)
+        {
+            Instantiate(GetRandomBonus(), new Vector3(sourcePosition.x, sourcePosition.y, transform.position.z - zOffset - zBonusOffset), Quaternion.identity, enemy.transform);
+        }
     }
     public void LevelInstantiated(LevelGeneratorController newLevelGeneratorController, Vector3 newLevelSize, float newFishMoveStep)
     {

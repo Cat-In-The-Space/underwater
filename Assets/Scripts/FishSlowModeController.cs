@@ -6,6 +6,7 @@ public class FishSlowModeController : MonoBehaviour
 {
     public LevelGeneratorController levelGeneratorController;
     public float levelSpeed;
+    public float slowModeFactor = 0.75f;
     public float slowModeTime = 0.0f;
     public float slowModeElapsedTime = 0.0f;
     public float slowModeRegenerationTime = 0.0f;
@@ -22,7 +23,7 @@ public class FishSlowModeController : MonoBehaviour
             return;
         }
 
-        levelSpeed = levelGeneratorController.speed;
+        levelSpeed = levelGeneratorController.speed * slowModeFactor;
         levelGeneratorController.speed -= levelSpeed;
 
         slowModeElapsedTime += slowModeTime;
@@ -31,7 +32,7 @@ public class FishSlowModeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        slowModeBar.speed = 1.0f / slowModeTime;
     }
 
     // Update is called once per frame

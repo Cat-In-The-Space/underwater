@@ -12,10 +12,16 @@ public class EnemyToSideLevelController : MonoBehaviour, ILevelControllable
 
     public Side side;
     public GameObject[] availableEnemies;
+    public GameObject[] availableBonuses;
     public float zOffset;
+    public float zBonusOffset;
     GameObject GetRandomEnemy()
     {
         return availableEnemies[Random.Range(0, availableEnemies.Length)];
+    }
+    GameObject GetRandomBonus()
+    {
+        return availableBonuses[Random.Range(0, availableBonuses.Length)];
     }
     public void LevelInstantiated(LevelGeneratorController newLevelGeneratorController, Vector3 newLevelSize, float newFishMoveStep)
     {
@@ -57,6 +63,7 @@ public class EnemyToSideLevelController : MonoBehaviour, ILevelControllable
 
         GameObject enemy = Instantiate(GetRandomEnemy(), spawnPosition, Quaternion.LookRotation(-Vector3.forward), transform);
         enemy.GetComponent<EnemyToSideItemController>().EnemyInstantiated(newLevelGeneratorController, sourcePosition, targetPosition, true, false);
+        Instantiate(GetRandomBonus(), enemy.transform.TransformPoint(0.0f, 0.0f, zBonusOffset), Quaternion.identity, enemy.transform);
     }
     // Start is called before the first frame update
     void Start()

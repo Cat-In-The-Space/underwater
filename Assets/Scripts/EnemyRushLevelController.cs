@@ -7,10 +7,15 @@ using UnityEngine;
 public class EnemyRushLevelController : MonoBehaviour, ILevelControllable
 {
     public GameObject[] availableEnemies;
+    public GameObject[] availableBonuses;
     public float zOffset;
     GameObject GetRandomEnemy()
     {
         return availableEnemies[Random.Range(0, availableEnemies.Length)];
+    }
+    GameObject GetRandomBonus()
+    {
+        return availableBonuses[Random.Range(0, availableBonuses.Length)];
     }
     public void LevelInstantiated(LevelGeneratorController newLevelGeneratorController, Vector3 newLevelSize, float newFishMoveStep)
     {
@@ -47,6 +52,10 @@ public class EnemyRushLevelController : MonoBehaviour, ILevelControllable
 
             GameObject enemy = Instantiate(GetRandomEnemy(), spawnPosition, rotation, transform);
             enemy.GetComponent<EnemyToSideItemController>().EnemyInstantiated(newLevelGeneratorController, sourcePositions[i], targetPositions[i], false, true);
+            if (Random.Range(0, 2) == 1)
+            {
+                Instantiate(GetRandomBonus(), enemy.transform.TransformPoint(0.0f, 0.0f, -1.0f * newFishMoveStep), Quaternion.identity, enemy.transform);
+            }
         }
     }
     // Start is called before the first frame update

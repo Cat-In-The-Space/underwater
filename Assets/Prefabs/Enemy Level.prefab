@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelGeneratorController: {fileID: 0}
   levelSize: {x: 0, y: 0, z: 0}
-  levelDeep: 5
+  levelDeep: 2
 --- !u!114 &345537773946297289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,4 +102,9 @@ MonoBehaviour:
   - {fileID: 8406376556357342592, guid: 144211713f75628418cec11540c9e4bc, type: 3}
   - {fileID: 6912596160653432799, guid: 3376d4916cb91cd46a0bf2fb1a58dc51, type: 3}
   - {fileID: 5048977316288918303, guid: 8039e2fb15743a04686cfb0cbdb73482, type: 3}
-  zOffset: 3
+  availableBonuses:
+  - {fileID: 5474938330262977021, guid: 39bb40b532857b144a3f83d8f0369336, type: 3}
+  - {fileID: 2169493566959254599, guid: d581807edf70d6d48bec72749e974b84, type: 3}
+  - {fileID: 8305847374428249775, guid: a14d29060ccbf8f4eb5deb2f7680f06d, type: 3}
+  zBonusOffset: 1
+  zOffset: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelGeneratorController : MonoBehaviour
 {
+    public Transform destroyPoint;
     public FishController fishController;
     public GameObject[] availableLevels;
     public LinkedList<LevelController> activeLevels;
@@ -25,9 +26,14 @@ public class LevelGeneratorController : MonoBehaviour
 
     LevelController InstantiateNewLevel(float z)
     {
-        GameObject level = Instantiate(GetRandomLevel(), transform);
+        GameObject levelPrefab = GetRandomLevel();
+        GameObject level = Instantiate(
+            levelPrefab, 
+            transform.TransformPoint(0.0f, 0.0f, z + levelPrefab.GetComponent<LevelController>().levelDeep), 
+            Quaternion.identity, 
+            transform
+        );
         LevelController levelController = level.GetComponent<LevelController>();
-        level.transform.localPosition = new Vector3(0.0f, 0.0f, z + levelController.levelDeep);
         levelController.LevelInstantiated(this, levelSize, fishController.moveStep);
         return levelController;
     }
@@ -62,6 +68,15 @@ public class LevelGeneratorController : MonoBehaviour
         {
             level.transform.localPosition += move;
         }
+        LevelController firstLevel = activeLevels.First.Value;
+        if (firstLevel.transform.position.z < destroyPoint.position.z)
+        {
+            LevelController lastLevel = activeLevels.Last.Value;
+            activeLevels.AddLast(InstantiateNewLevel(lastLevel.transform.localPosition.z));
+            activeLevels.RemoveFirst();
+            Destroy(firstLevel.gameObject);
+            speed = Mathf.Min(speed * speedIncreaseFactor, maxSpeed);
+        }
     }
 
     void UpdateParallax(Vector3 move)
@@ -75,18 +90,11 @@ public class LevelGeneratorController : MonoBehaviour
         {
             nextParallax = 0;
         }
-        if (parallaxes[nextParallax].transform.position.z < fishController.transform.position.z)
+        if (parallaxes[nextParallax].transform.position.z < destroyPoint.position.z)
         {
             parallaxes[currentParallax].transform.localPosition += parallaxResetDistance;
             currentParallax = nextParallax;
             parallaxes[currentParallax].Refresh();
         }
-    }
-
-    public void LevelCompleted()
-    {
-        activeLevels.RemoveFirst();
-        activeLevels.AddLast(InstantiateNewLevel(activeLevels.Last.Value.transform.localPosition.z));
-        speed = Mathf.Min(speed * speedIncreaseFactor, maxSpeed);
     }
 }

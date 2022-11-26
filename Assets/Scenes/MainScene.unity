@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07089318, g: 0.2935747, b: 0.3401485, a: 1}
+  m_IndirectSpecularColor: {r: 0.07104712, g: 0.29354504, b: 0.3401971, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1045,12 +1045,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1437402317}
     m_Modifications:
     - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 192.23999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 192.23999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.3499756
+      value: 594.984
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.3500061
+      value: 88.776
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_Pivot.x
@@ -1082,11 +1090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 272.7
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 272.7
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1118,11 +1126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1483.65
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 79.649994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1136,13 +1144,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8357075260311584736, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260331593090, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260331611922, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260331662236, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8357075260331664250, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_Name
       value: Minimalist Joystick 03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8357075260331675748, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342436558, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342436572, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: useFade
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: deadZone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: fadeTouched
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: showTension
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: joystickName
       value: Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: joystickSize
+      value: 1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: fadeUntouched
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: showHighlight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: disableVisuals
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: fadeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: radiusModifier
+      value: 4.25
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: customSpacing_X
@@ -1153,8 +1229,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: fadeOutDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: joystickTouchSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: dynamicPositioning
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
@@ -7356,7 +7440,7 @@ RectTransform:
   - {fileID: 1839039203}
   - {fileID: 916125555}
   m_Father: {fileID: 1536037281}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11185,8 +11269,8 @@ RectTransform:
   - {fileID: 1931188365}
   - {fileID: 611688545}
   - {fileID: 1109006824}
-  - {fileID: 224002306424913597}
   - {fileID: 1043450746}
+  - {fileID: 224002306424913597}
   - {fileID: 1563258374}
   - {fileID: 1674406275}
   m_Father: {fileID: 0}

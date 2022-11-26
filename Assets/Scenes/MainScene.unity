@@ -1046,19 +1046,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 192.23999
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 192.23999
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 762.984
+      value: 2008.8
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311416176, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 88.776
+      value: 97.20001
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_Pivot.x
@@ -1074,7 +1074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1082,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1090,11 +1090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1170
+      value: 2340
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 810
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1126,7 +1126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1170
+      value: -2340
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311478102, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1146,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260311584736, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260331593090, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_IsActive
@@ -1170,15 +1170,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342436558, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342436572, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: useFade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: deadZone
@@ -1198,11 +1198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: joystickSize
-      value: 1.78
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: fadeUntouched
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: showHighlight
@@ -1210,7 +1210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: disableVisuals
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: fadeInDuration
@@ -1218,7 +1218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: radiusModifier
-      value: 4.25
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: tapCountOption
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: customSpacing_X
@@ -1233,12 +1237,28 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: tapCountDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: customTouchSize_X
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: customTouchSize_Y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: joystickTouchSize
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
       propertyPath: dynamicPositioning
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357075260342518124, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
+      propertyPath: customTouchSizePos_X
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959a1fc02e150f64b9d78c67c9231325, type: 3}
@@ -7698,11 +7718,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099680585}
   m_Mesh: {fileID: 4300002, guid: fd9ab46b08952124992082ced640a5d6, type: 3}
---- !u!1 &1109006823 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1383066086716522, guid: 7b289e92e95d748da93a958fcb2cc084, type: 3}
-  m_PrefabInstance: {fileID: 1554981440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1109006824 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224745972849065864, guid: 7b289e92e95d748da93a958fcb2cc084, type: 3}
@@ -11409,7 +11424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishSlowModeController: {fileID: 1883820493}
   slowModeBar: {fileID: 611688544}
-  slowModeButton: {fileID: 1109006823}
+  slowModeButton: {fileID: 0}
 --- !u!1 &1544450511
 GameObject:
   m_ObjectHideFlags: 0
@@ -11593,6 +11608,10 @@ PrefabInstance:
     - target: {fileID: 1383066086716522, guid: 7b289e92e95d748da93a958fcb2cc084, type: 3}
       propertyPath: m_Name
       value: GoToSlowMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383066086716522, guid: 7b289e92e95d748da93a958fcb2cc084, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114203492113690598, guid: 7b289e92e95d748da93a958fcb2cc084, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

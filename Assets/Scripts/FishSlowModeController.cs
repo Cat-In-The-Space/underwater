@@ -59,5 +59,9 @@ public class FishSlowModeController : MonoBehaviour
         {
             slowModeRegenerationElapsedTime -= Time.deltaTime;
         }
+        else
+        {
+            if (UltimateJoystick.GetTapCount("Fish") && (UltimateJoystick.GetDistance("Fish") < 0.5f)) SlowMode();
+        }
     }
 }

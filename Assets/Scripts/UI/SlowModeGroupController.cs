@@ -21,17 +21,17 @@ public class SlowModeGroupController : MonoBehaviour
             slowModeBar.SetActive(true);
             if (fishSlowModeController.CanGoToSlowMode())
             {
-                slowModeButton.SetActive(true);
+                //slowModeButton.SetActive(true);
             }
             else
             {
-                slowModeButton.SetActive(false);
+              //  slowModeButton.SetActive(false);
             }
         }
         else
         {
             slowModeBar.SetActive(false);
-            slowModeButton.SetActive(false);
+            //slowModeButton.SetActive(false);
         }
     }
 }

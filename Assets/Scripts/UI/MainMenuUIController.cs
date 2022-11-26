@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuUIController : MonoBehaviour
 {
+    AudioSource audioSource;
+    public AudioClip playClip, shopClip;
+    public SplashScreenController splashScreen;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,11 +23,13 @@ public class MainMenuUIController : MonoBehaviour
 
     public void OnButtonPlayClick()
     {
-        SceneManager.LoadScene("MainScene");
+        audioSource.PlayOneShot(playClip);
+        splashScreen.LoadScene("MainScene");
     }
 
     public void OnButtonStoreClick()
     {
-        SceneManager.LoadScene("StoreScene");
+        audioSource.PlayOneShot(shopClip);
+        splashScreen.LoadScene("StoreScene");
     }
 }

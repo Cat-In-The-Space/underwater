@@ -38,6 +38,13 @@ public class StoreController : MonoBehaviour
 
     public Transform spawnPoint, demoPoint, destroyPoint;
     public GameObject notEnoughtMoneyPanel, nextButton, prevButton;
+    AudioSource audioSource;
+    public AudioClip swipeFish;
+    public AudioClip closeButtonClip;
+    public AudioClip dontEnoughMoneyClip;
+    public AudioClip buyClip;
+    public AudioClip selectClip;
+    public SplashScreenController splashScreen;
 
     public int selectedFishIndex = 0, activeFishIndex = 0;
     public int playerBonus = 0;
@@ -81,6 +88,7 @@ public class StoreController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         UpdateMetrics();
         UpdateActiveFish();
     }
@@ -97,7 +105,7 @@ public class StoreController : MonoBehaviour
         {
             activeFish.SetTarget(destroyPoint.position, true);
         }
-        activeFish = Instantiate(fishes[selectedFishIndex], spawnPoint.position, Quaternion.identity, transform).AddComponent<FishController>();
+        activeFish = Instantiate(fishes[selectedFishIndex], spawnPoint.position, Quaternion.identity, transform.parent).AddComponent<FishController>();
         activeFish.SetTarget(demoPoint.position, false);
     }
 
@@ -107,6 +115,7 @@ public class StoreController : MonoBehaviour
         {
             return;
         }
+        audioSource.PlayOneShot(swipeFish);
         selectedFishIndex += 1;
         if (selectedFishIndex >= fishes.Length)
         {
@@ -121,6 +130,7 @@ public class StoreController : MonoBehaviour
         {
             return;
         }
+        audioSource.PlayOneShot(swipeFish);
         selectedFishIndex -= 1;
         if (selectedFishIndex < 0)
         {
@@ -130,6 +140,7 @@ public class StoreController : MonoBehaviour
     }
     public void OnCloseNotEnoughtMoneyClick()
     {
+        audioSource.PlayOneShot(closeButtonClip);
         notEnoughtMoneyPanel.SetActive(false);
         nextButton.SetActive(true);
         prevButton.SetActive(true);
@@ -147,10 +158,12 @@ public class StoreController : MonoBehaviour
             int selectedFishCost = fishStatistics[selectedFishIndex].cost;
             if (selectedFishCost > playerBonus)
             {
+                audioSource.PlayOneShot(dontEnoughMoneyClip);
                 ShowNotEnoughtMoney();
             }
             else
             {
+                audioSource.PlayOneShot(buyClip);
                 playerBonus -= selectedFishCost;
                 Utils.SetBonus(playerBonus);
 
@@ -163,6 +176,7 @@ public class StoreController : MonoBehaviour
     {
         if (fishAvailable[selectedFishIndex])
         {
+            audioSource.PlayOneShot(selectClip);
             Utils.SetActiveFishIndex(selectedFishIndex);
             activeFishIndex = selectedFishIndex;
         }
@@ -170,6 +184,8 @@ public class StoreController : MonoBehaviour
 
     public void OnCloseButtonClick()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        audioSource.PlayOneShot(closeButtonClip);
+
+        splashScreen.LoadScene("MainMenuScene");
     }
 }

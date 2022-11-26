@@ -16,6 +16,6 @@ public class HealthProgressBarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        progressBar.fillAmount = Mathf.Lerp(0, storeController.maxHealth, storeController.fishStatistics[storeController.selectedFishIndex].maxHealth);
+        progressBar.fillAmount = Mathf.InverseLerp(0, storeController.maxHealth, storeController.fishStatistics[storeController.selectedFishIndex].maxHealth);
     }
 }

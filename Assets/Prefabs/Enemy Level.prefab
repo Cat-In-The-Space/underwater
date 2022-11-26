@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7287697975818521550}
   - component: {fileID: 7287697975818521551}
-  - component: {fileID: 7287697975818521548}
   - component: {fileID: 8406073813457574125}
   - component: {fileID: 345537773946297289}
   m_Layer: 0
@@ -43,19 +42,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7287697975818521549}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &7287697975818521548
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7287697975818521549}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8406073813457574125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelGeneratorController: {fileID: 0}
   levelSize: {x: 0, y: 0, z: 0}
-  levelDeep: 2
+  levelDeep: 3
 --- !u!114 &345537773946297289
 MonoBehaviour:
   m_ObjectHideFlags: 0

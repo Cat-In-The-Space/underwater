@@ -884,11 +884,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  maxHealth: 3
+  moveSpeed: 3
+  maxHealth: 4
   canHealthRegenerate: 1
   healthRegenerationTime: 30
-  canSlowMode: 0
-  slowModeRegenerationTime: 0
-  haveMagnet: 0
-  cost: 600
+  canSlowMode: 1
+  slowModeRegenerationTime: 20
+  haveMagnet: 1
+  cost: 16000

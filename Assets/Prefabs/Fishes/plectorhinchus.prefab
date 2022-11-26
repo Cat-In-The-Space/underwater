@@ -121,11 +121,11 @@ MonoBehaviour:
   moveSpeed: 2
   maxHealth: 2
   canHealthRegenerate: 1
-  healthRegenerationTime: 30
+  healthRegenerationTime: 50
   canSlowMode: 0
   slowModeRegenerationTime: 0
-  haveMagnet: 0
-  cost: 1250
+  haveMagnet: 1
+  cost: 12000
 --- !u!1 &202206807600598932
 GameObject:
   m_ObjectHideFlags: 0

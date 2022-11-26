@@ -595,6 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+  clip: {fileID: 8300000, guid: e4749c92b263d76458290cc58f28cd07, type: 3}
 --- !u!1 &3845087786610302930
 GameObject:
   m_ObjectHideFlags: 0

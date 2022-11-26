@@ -13,12 +13,6 @@ public class LevelController : MonoBehaviour
         levelGeneratorController = newLevelGeneratorController;
         levelSize = newLevelSize;
         fishMoveStep = newFishMoveStep;
-
-        BoxCollider boxCollider = GetComponent<BoxCollider>();
-
-        // (fish moveStep/2) . maxX ... 0 ... minX . (fish moveStep/2)
-        boxCollider.size = new Vector3(levelSize.x + fishMoveStep, levelSize.y + fishMoveStep, boxCollider.size.z);
-
         foreach(ILevelControllable controller in GetComponents<ILevelControllable>())
         {
             controller.LevelInstantiated(levelGeneratorController, levelSize, fishMoveStep);

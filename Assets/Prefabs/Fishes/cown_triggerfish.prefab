@@ -342,14 +342,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d10cb90d752d6e41a15c804b00c16b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1
   maxHealth: 2
   canHealthRegenerate: 1
-  healthRegenerationTime: 30
+  healthRegenerationTime: 50
   canSlowMode: 0
   slowModeRegenerationTime: 0
   haveMagnet: 0
-  cost: 400
+  cost: 3000
 --- !u!1 &2950514378938125538
 GameObject:
   m_ObjectHideFlags: 0

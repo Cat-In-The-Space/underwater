@@ -5,6 +5,8 @@ using UnityEngine;
 public class FishSlowModeController : MonoBehaviour
 {
     public LevelGeneratorController levelGeneratorController;
+    public AudioSource audioSource;
+    public AudioClip clip;
     public float levelSpeed;
     public float slowModeFactor = 0.75f;
     public float slowModeTime = 0.0f;
@@ -23,6 +25,8 @@ public class FishSlowModeController : MonoBehaviour
             return;
         }
 
+        audioSource.PlayOneShot(clip);
+
         levelSpeed = levelGeneratorController.speed * slowModeFactor;
         levelGeneratorController.speed -= levelSpeed;
 
@@ -32,6 +36,7 @@ public class FishSlowModeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         slowModeBar.speed = 1.0f / slowModeTime;
     }
 

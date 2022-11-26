@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   amount: 3
+  triggerSound: {fileID: 8300000, guid: 2e32aa37c2fdde3449a6365eaa0a5dca, type: 3}
 --- !u!114 &3463282221759473896
 MonoBehaviour:
   m_ObjectHideFlags: 0

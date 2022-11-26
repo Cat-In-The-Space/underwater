@@ -6,6 +6,7 @@ public class CoinLevelItemController : MonoBehaviour
 {
     public float rotationSpeed;
     public int amount;
+    public AudioClip triggerSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class CoinLevelItemController : MonoBehaviour
         }
         if (fishBonusController)
         {
+            fishBonusController.GetComponent<AudioSource>().PlayOneShot(triggerSound);
             fishBonusController.bonuses += amount;
             Destroy(gameObject);
         }

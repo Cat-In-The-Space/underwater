@@ -209,13 +209,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  maxHealth: 2
+  maxHealth: 3
   canHealthRegenerate: 1
-  healthRegenerationTime: 30
+  healthRegenerationTime: 40
   canSlowMode: 0
   slowModeRegenerationTime: 0
   haveMagnet: 0
-  cost: 500
+  cost: 4000
 --- !u!1 &4984725342799873035
 GameObject:
   m_ObjectHideFlags: 0

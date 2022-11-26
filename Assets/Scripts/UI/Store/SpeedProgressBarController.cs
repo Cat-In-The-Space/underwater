@@ -16,6 +16,6 @@ public class SpeedProgressBarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        progressBar.fillAmount = Mathf.Lerp(0, storeController.maxSpeed, storeController.fishStatistics[storeController.selectedFishIndex].moveSpeed);
+        progressBar.fillAmount = Mathf.InverseLerp(0, storeController.maxSpeed, storeController.fishStatistics[storeController.selectedFishIndex].moveSpeed);
     }
 }

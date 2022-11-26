@@ -6,7 +6,13 @@ public class LevelGeneratorController : MonoBehaviour
 {
     public Transform destroyPoint;
     public FishController fishController;
-    public GameObject[] availableLevels;
+
+    [Range(0.0f, 1.0f)]
+    public float enemyFactor;
+    public GameObject[] availableBonusLevels;
+    public GameObject[] availableEnemyLevels;
+
+
     public LinkedList<LevelController> activeLevels;
     public int activeLevelsCount = 3;
     public Vector3 levelSize;
@@ -21,7 +27,14 @@ public class LevelGeneratorController : MonoBehaviour
 
     GameObject GetRandomLevel()
     {
-        return availableLevels[Random.Range(0, availableLevels.Length)];
+        if (Random.Range(0.0f, 1.0f) <= enemyFactor)
+        {
+            return availableEnemyLevels[Random.Range(0, availableEnemyLevels.Length)];
+        }
+        else
+        {
+            return availableBonusLevels[Random.Range(0, availableBonusLevels.Length)];
+        }
     }
 
     LevelController InstantiateNewLevel(float z)

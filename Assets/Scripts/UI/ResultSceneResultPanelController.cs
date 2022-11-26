@@ -15,6 +15,9 @@ public class ResultSceneResultPanelController : MonoBehaviour
     public Text yourTimeText;
     public Text totalCoinsText;
     public Text yourCoinsText;
+    public AudioSource audioSource;
+    public AudioClip closeButtonClip;
+    public SplashScreenController splashScreen;
 
     public int totalCoins;
     public float totalCoinsSpeed = 0.7f;
@@ -44,11 +47,12 @@ public class ResultSceneResultPanelController : MonoBehaviour
 
     public void OnCloseButtonClick()
     {
+        audioSource.PlayOneShot(closeButtonClip);
         if (newLiveTime > liveTime)
         {
             Utils.SetMaxLiveTime(newLiveTime);
         }
         Utils.SetBonus(bonus + newBonus);
-        SceneManager.LoadScene("MainMenuScene");
+        splashScreen.LoadScene("MainMenuScene");
     }
 }

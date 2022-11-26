@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyItemController : MonoBehaviour
 {
     public int damage;
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class EnemyItemController : MonoBehaviour
         {
             if (fishHealthController.Damage(damage))
             {
+                fishHealthController.GetComponent<AudioSource>().PlayOneShot(clip);
                 Destroy(gameObject);
             }
         }

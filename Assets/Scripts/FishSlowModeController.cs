@@ -1,67 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishSlowModeController : MonoBehaviour
 {
+    private enum Status
+    {
+        WAIT,
+        ACTIVE,
+        REGENERATE
+    }
+    private Status status = Status.WAIT;
+    private float speedDecreaseBy;
+    private float timer;
+
     public LevelGeneratorController levelGeneratorController;
     public AudioSource audioSource;
     public AudioClip clip;
-    public float levelSpeed;
+    public Image progressBar;
+    [Range(0.0f, 1.0f)]
     public float slowModeFactor = 0.75f;
     public float slowModeTime = 0.0f;
-    public float slowModeElapsedTime = 0.0f;
     public float slowModeRegenerationTime = 0.0f;
-    public float slowModeRegenerationElapsedTime = 0.0f;
     public ProgressBarController slowModeBar;
-    public bool CanGoToSlowMode()
-    {
-        return slowModeRegenerationElapsedTime <= 0.0f;
-    }
+    public string joystickName = "Fish";
+    [Range(0.0f, 1.0f)]
+    public float tapMaxMoveDistance = 0.5f;
+
     public void SlowMode()
     {
-        if (!CanGoToSlowMode())
+        if (status != Status.WAIT)
         {
             return;
         }
+        status = Status.ACTIVE;
 
         audioSource.PlayOneShot(clip);
 
-        levelSpeed = levelGeneratorController.speed * slowModeFactor;
-        levelGeneratorController.speed -= levelSpeed;
+        speedDecreaseBy = levelGeneratorController.speed * slowModeFactor;
+        levelGeneratorController.speed -= speedDecreaseBy;
 
-        slowModeElapsedTime += slowModeTime;
-        slowModeRegenerationElapsedTime += slowModeRegenerationTime;
+        timer = slowModeTime;
     }
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        slowModeBar.speed = 1.0f / slowModeTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        slowModeBar.SetValue(slowModeRegenerationTime - slowModeRegenerationElapsedTime, slowModeRegenerationTime);
+        if (status == Status.ACTIVE)
+        {
+            timer -= Time.deltaTime;
+            progressBar.fillAmount = Mathf.InverseLerp(0, slowModeTime, timer);
+            if (timer <= 0.0f)
+            {
+                levelGeneratorController.speed += speedDecreaseBy;
+                speedDecreaseBy = 0.0f;
 
-        if (slowModeElapsedTime > 0.0f)
-        {
-            slowModeElapsedTime -= Time.deltaTime;
+                status = Status.REGENERATE;
+                timer += slowModeRegenerationTime;
+            }
         }
-        else
+        else if (status == Status.REGENERATE)
         {
-            levelGeneratorController.speed += levelSpeed;
-            levelSpeed = 0.0f;
+            timer -= Time.deltaTime;
+            progressBar.fillAmount = Mathf.InverseLerp(0, slowModeRegenerationTime, slowModeRegenerationTime - timer);
+            if (timer <= 0.0f)
+            {
+                status = Status.WAIT;
+                timer = 0.0f;
+            }
         }
-
-        if (!CanGoToSlowMode())
+        else if (status == Status.WAIT)
         {
-            slowModeRegenerationElapsedTime -= Time.deltaTime;
-        }
-        else
-        {
-            if (UltimateJoystick.GetTapCount("Fish") && (UltimateJoystick.GetDistance("Fish") < 0.5f)) SlowMode();
+            if (UltimateJoystick.GetTapCount(joystickName) && (UltimateJoystick.GetDistance(joystickName) < tapMaxMoveDistance))
+            {
+                SlowMode();
+            }
         }
     }
 }

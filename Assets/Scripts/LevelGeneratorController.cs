@@ -65,7 +65,10 @@ public class LevelGeneratorController : MonoBehaviour
         }
 
         parallaxResetDistance = parallaxSpawner.localPosition - parallaxes[currentParallax].transform.localPosition;
-        parallaxes[currentParallax].Refresh();
+        foreach (ParallaxItemController parallax in parallaxes)
+        {
+            parallax.Refresh();
+        }
     }
     // Update is called once per frame
     void Update()
@@ -106,8 +109,8 @@ public class LevelGeneratorController : MonoBehaviour
         if (parallaxes[nextParallax].transform.position.z < destroyPoint.position.z)
         {
             parallaxes[currentParallax].transform.localPosition += parallaxResetDistance;
-            currentParallax = nextParallax;
             parallaxes[currentParallax].Refresh();
+            currentParallax = nextParallax;
         }
     }
 }

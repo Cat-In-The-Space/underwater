@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if ENABLE_CLOUD_SERVICES_ANALYTICS
+using UnityEngine.Analytics;
+#endif
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -24,6 +27,13 @@ public class SplashScreenController : MonoBehaviour
         {
             return;
         }
+
+        #if ENABLE_CLOUD_SERVICES_ANALYTICS
+        Analytics.CustomEvent("loadScene", new Dictionary<string, object> { 
+            { "name",sceneName } 
+        });
+        #endif
+
         splashScreen.color = invisible;
         splashScreen.gameObject.SetActive(true);
         t = 0.0f;

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+#if ENABLE_CLOUD_SERVICES_ANALYTICS
+using UnityEngine.Analytics;
+#endif
 using UnityEngine.UI;
 
 public class StoreController : MonoBehaviour
@@ -169,6 +171,13 @@ public class StoreController : MonoBehaviour
 
                 fishAvailable[selectedFishIndex] = true;
                 Utils.BuyFish(selectedFishIndex);
+
+                #if ENABLE_CLOUD_SERVICES_ANALYTICS
+                Analytics.CustomEvent("buyFish", new Dictionary<string, object> {
+                    {"index", selectedFishIndex },
+                    {"cost", selectedFishCost }
+                });
+                #endif
             }
         }
     }
@@ -179,6 +188,12 @@ public class StoreController : MonoBehaviour
             audioSource.PlayOneShot(selectClip);
             Utils.SetActiveFishIndex(selectedFishIndex);
             activeFishIndex = selectedFishIndex;
+
+            #if ENABLE_CLOUD_SERVICES_ANALYTICS
+            Analytics.CustomEvent("selectFish", new Dictionary<string, object> {
+                    {"index", selectedFishIndex }
+            });
+            #endif
         }
     }
 

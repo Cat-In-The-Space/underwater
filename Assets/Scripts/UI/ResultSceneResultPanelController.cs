@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+#if ENABLE_CLOUD_SERVICES_ANALYTICS
+using UnityEngine.Analytics;
+#endif
 using UnityEngine.UI;
 
 public class ResultSceneResultPanelController : MonoBehaviour
@@ -47,12 +49,19 @@ public class ResultSceneResultPanelController : MonoBehaviour
 
     public void OnCloseButtonClick()
     {
+        int totalBonus = bonus + newBonus;
         audioSource.PlayOneShot(closeButtonClip);
-        if (newLiveTime > liveTime)
-        {
-            Utils.SetMaxLiveTime(newLiveTime);
-        }
-        Utils.SetBonus(bonus + newBonus);
+        Utils.SetMaxLiveTime(Mathf.Max(liveTime, newLiveTime));
+        Utils.SetBonus(totalBonus);
+        #if ENABLE_CLOUD_SERVICES_ANALYTICS
+        Analytics.CustomEvent("levelResult", new Dictionary<string, object> {
+            {"liveTime", liveTime },
+            {"newLiveTIme", newLiveTime },
+            {"bonus", bonus },
+            {"newBonus", newBonus },
+            {"totalBonus", totalBonus }
+        });
+        #endif
         splashScreen.LoadScene("MainMenuScene");
     }
 }

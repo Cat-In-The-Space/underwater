@@ -60,7 +60,7 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
           customParameters: '-myParameter myValue -myBoolean -ThirdParameter andItsValue'
       - shell: bash
-        run : curl -v -F "caption=${{ github.event.repository.name }}: ${{ github.event.head_commit.message }}" -F "chat_id=-1001736723487" -F document=@./build/Android/Android.apk https://api.telegram.org/bot5892889789:AAH4t46fextqm7c2jNZ_z2JLH-BY63SF8d8/sendDocument
+        run: curl -v -F "caption=${{ github.event.repository.name }}: ${{ github.event.head_commit.message }}" -F "chat_id=-1001736723487" -F document=@./build/Android/Android.apk https://api.telegram.org/bot5892889789:AAH4t46fextqm7c2jNZ_z2JLH-BY63SF8d8/sendDocument
       - uses: actions/upload-artifact@v2
         with:
           name: Build
